@@ -16,7 +16,7 @@ import logging
 from collections import OrderedDict
 import multiprocessing
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import keras
 import keras.backend as K
 import keras.layers as KL
@@ -24,7 +24,7 @@ import keras.engine as KE
 import keras.models as KM
 
 from mrcnn import utils
-
+tf.disable_v2_behavior()
 # Requires TensorFlow 1.3+ and Keras 2.0.8+.
 from distutils.version import LooseVersion
 assert LooseVersion(tf.__version__) >= LooseVersion("1.3")

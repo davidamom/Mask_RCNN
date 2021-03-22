@@ -13,11 +13,12 @@ https://github.com/avolkov1/keras_experiments/blob/master/keras_exp/multigpu/
 https://github.com/fchollet/keras/blob/master/keras/utils/training_utils.py
 """
 
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import keras.backend as K
 import keras.layers as KL
 import keras.models as KM
 
+tf.disable_v2_behavior()
 
 class ParallelModel(KM.Model):
     """Subclasses the standard Keras Model and adds multi-GPU support.
