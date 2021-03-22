@@ -18,6 +18,7 @@ import keras.backend as K
 import keras.layers as KL
 import keras.models as KM
 
+tf.placeholder()
 tf.disable_v2_behavior()
 
 class ParallelModel(KM.Model):
